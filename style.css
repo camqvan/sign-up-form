@@ -119,19 +119,20 @@ input:focus {
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
+.error,
 .error-message {
   color: red;
   font-size: 12px;
   display: none;
+  /* Hidden by default */
+  margin-top: 5px;
 }
 
-/* .error-message {
+.error-message.visible {
   display: block;
-} */
+  /* Make error messages visible */
+}
 
-/* .form-group input:invalid+.error-message {
-  display: block;
-} */
 
 .submit-btn {
   background-color: #596D48;
