@@ -8,11 +8,19 @@
   </head>
   <body>
     <div class="container">
-      <div class="image">
+      <div class="image-section">
         <img
           src="https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=1862&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt=""
         />
+        <div class="logo-overlay">
+          <img
+            src="https://cdn.statically.io/gh/TheOdinProject/curriculum/5f37d43908ef92499e95a9b90fc3cc291a95014c/html_css/project-sign-up-form/odin-lined.png"
+            alt="Company Logo"
+            class="company-logo"
+          />
+          <span class="company-text">ODIN</span>
+        </div>
       </div>
       <div class="sign-up-section">
         <div class="introduction">
@@ -24,12 +32,63 @@
           <p>You <i>know</i> you want to.</p>
         </div>
         <div class="sign-up-form">
-          <div class="Title">
-            <h2>Let's do this!</h2>
-          </div>
           <div class="form">
-            <form action=""></form>
-          </div>
+            <form action="" id="signup-form">
+              <h3 class="form-title">Let's do this!</h3>
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" id="first-name" required />
+                <div class="error"></div>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" id="last-name" required />
+                <div class="error"></div>
+              </div>
+              <div class="form-group">
+                <label for="mail">Email</label>
+                <input type="email" name="mail" id="mail" required />
+                <div class="error"></div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" name="phone" id="phone" required />
+                <div class="error"></div>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  minlength="8"
+                  placeholder="Enter your password"
+                />
+                <div class="error-message password-error" id="password-error"
+                  >Password must be at least 8 characters long.</div
+                >
+              </div>
+              <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input
+                  type="password"
+                  name="confirm-password"
+                  id="confirm-password"
+                  class="confirm-password"
+                  required
+                  placeholder="Confirm your password"
+                />
+                <div class="error-message confirm-password-error" id="confirm-password-error">Password do not match.</div>
+              </div>
+              <div id="btn">
+                <button type="submit" class="submit-btn">Create Account</button>
+                <p class="btn-text">
+                  Already have an account?
+                  <span class="btn-text-highlighted">Log in</span>
+                </p>
+              </div>
+            </form>
         </div>
       </div>
     </div>
