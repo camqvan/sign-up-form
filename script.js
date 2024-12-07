@@ -10,12 +10,12 @@ const phone = document.getElementById('phone');
 function handleValidation(input, errorField, isValid, message) {
   if (isValid) {
     errorField.textContent = ''; // Clear error message
-    errorField.style.display = 'none'; // Hide error message
+    errorField.classList.remove('visible'); // Hide error message
     input.classList.remove('invalid');
     input.classList.add('valid');
   } else {
-    errorField.textContent = message; // Show error message
-    errorField.style.display = 'block'; // Display error message
+    errorField.textContent = message; // Set error message
+    errorField.classList.add('visible'); // Show error message
     input.classList.add('invalid');
     input.classList.remove('valid');
   }

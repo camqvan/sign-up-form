@@ -123,16 +123,18 @@ input:focus {
 .error-message {
   color: red;
   font-size: 12px;
-  display: none;
-  /* Hidden by default */
+  visibility: hidden;
+  /* Reserve space while hiding */
   margin-top: 5px;
+  height: 16px;
+  /* Ensures consistent height for error messages */
 }
 
+.error.visible,
 .error-message.visible {
-  display: block;
-  /* Make error messages visible */
+  visibility: visible;
+  /* Make visible without affecting layout */
 }
-
 
 .submit-btn {
   background-color: #596D48;
